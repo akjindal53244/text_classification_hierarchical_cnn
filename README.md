@@ -12,6 +12,7 @@ https://arxiv.org/pdf/1508.06615.pdf
 # File configuations:
 1. Assign suitable name to variable 'dataset_identity' (dataset specific name) under class DataConfig. Create folder with name "dump_" + dataset_identity under 'data' folder. All dataset specific vocab, embedding_matrix will be automatically stored in this folder. It helps maintaining consistency while doing experiments on multiple datasets.
 2. Like above, copy train, valid and test files under folder with name as 'dataset_identity' variable's value under 'data' folder and accordingly change file/folder paths into class DataConfig under 'utils/feature_extraction.py'.
+3. data format: Label TAB Utterance   (No space around "\t")
 
 # Hyperparameters/architecture related configurations:
 1. Model and architecture related settings (number of layers, filters, enable fully connected layers, dropout, epochs, batch_size, lr etc..) can be adjusted via class 'ModelConfig' under 'utils/feature_extraction.py'
